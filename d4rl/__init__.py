@@ -10,6 +10,7 @@ SUPPRESS_MESSAGES = bool(os.environ.get('D4RL_SUPPRESS_IMPORT_ERROR', 0))
 
 _ERROR_MESSAGE = 'Warning: %s failed to import. Set the environment variable D4RL_SUPPRESS_IMPORT_ERROR=1 to suppress this message.'
 
+"""
 try:
     import d4rl.locomotion
     import d4rl.hand_manipulation_suite
@@ -49,6 +50,9 @@ except ImportError as e:
     if not SUPPRESS_MESSAGES:
         print(_ERROR_MESSAGE % 'GymBullet', file=sys.stderr)
         print(e, file=sys.stderr)
+
+"""
+
 
 def reverse_normalized_score(env_name, score):
     ref_min_score = d4rl.infos.REF_MIN_SCORE[env_name]
